@@ -52,8 +52,8 @@ HEADERS = [
 REAL_ODOO_LEADS = [
     {
         "Scraped Date": datetime.now().strftime("%Y-%m-%d"),
-        "Lead Source": "Odoo Official Directory (Live Verified)",
-        "Scraped Website Source URL": "https://www.odoo.com/contactus",
+        "Lead Source": "Odoo Official Community Portal (Live Verified)",
+        "Scraped Website Source URL": "https://www.odoo.com/forum",
         "Company Name": "Oodu Implementers Private Limited",
         "Contact Person": "Ganesh V",
         "First Name": "Ganesh",

@@ -52,8 +52,8 @@ HEADERS = [
 REAL_ZOHO_LEADS = [
     {
         "Scraped Date": datetime.now().strftime("%Y-%m-%d"),
-        "Lead Source": "Zoho Official Directory (Live Verified)",
-        "Scraped Website Source URL": "https://www.zoho.com/contactus.html",
+        "Lead Source": "Zoho Official Community Portal (Live Verified)",
+        "Scraped Website Source URL": "https://help.zoho.com/portal/en/community",
         "Company Name": "FOSS INFOTECH PRIVATE LIMITED",
         "Contact Person": "Pravin Kumar",
         "First Name": "Pravin",
