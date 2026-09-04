@@ -53,27 +53,28 @@ Location Filter Rules:
 - Secondary: Rest of India
 
 ================================================================================
-4. 19-COLUMN CRM IMPORT SCHEMA (COLUMNS A1 TO S1):
+4. 20-COLUMN CRM IMPORT SCHEMA (COLUMNS A1 TO T1):
 ================================================================================
 A: Scraped Date
 B: Lead Source
-C: Company Name
-D: Contact Person
-E: First Name
-F: Last Name
-G: Job Title
-H: Work Email (RFC Validated - @odoo.com / @zohocorp.com)
-I: Phone Number (Direct Mobile or Desk Line)
-J: Company Website URL (Unique Product / Departmental URL)
-K: City
-L: State
-M: Country
-N: Industry / Module Focus
-O: Partner Grade (Direct Parent Company (HQ))
-P: Lead Status (New / Active Lead)
-Q: Call Status (New / Pending Call)
-R: Follow Up Notes
-S: Description
+C: Scraped Website Source URL (Website domain/portal from where data was scraped)
+D: Company Name
+E: Contact Person
+F: First Name
+G: Last Name
+H: Job Title
+I: Work Email (RFC Validated - @odoo.com / @zohocorp.com)
+J: Phone Number (Direct Mobile or Desk Line)
+K: Company Website URL (Unique Product / Departmental URL)
+L: City
+M: State
+N: Country
+O: Industry / Module Focus
+P: Partner Grade (Direct Parent Company (HQ))
+Q: Lead Status (New / Active Lead)
+R: Call Status (New / Pending Call)
+S: Follow Up Notes
+T: Description
 
 ================================================================================
 5. AUTOMATION TIMING & CRON SCHEDULE:

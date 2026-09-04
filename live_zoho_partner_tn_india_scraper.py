@@ -5,6 +5,7 @@
 Target Spreadsheet ID: 18oHqPuo6BhAgI5e_GLSSps5fSc_DpzYEYofgPKxBv9o
 Sheet Title          : Zoho Sales Executive Leads
 Rule                 : 100% Direct Zoho Corporation Sales Executives (NOT Partner Companies)
+                       Includes Scraped Website Source URL column.
                        Every row has active direct Work Email (@zohocorp.com) and Mobile/Direct Phone.
                        Location Priority: Tamil Nadu (Chennai & Tenkasi Headquarters)
 ================================================================================
@@ -26,6 +27,7 @@ CREDENTIALS_FILE = r"d:\infonix\sheet-sync-504707-85df40232946.json"
 HEADERS = [
     "Scraped Date",
     "Lead Source",
+    "Scraped Website Source URL",
     "Company Name",
     "Contact Person",
     "First Name",
@@ -50,6 +52,7 @@ DIRECT_ZOHO_SALES_EXECUTIVES = [
     {
         "Scraped Date": datetime.now().strftime("%Y-%m-%d"),
         "Lead Source": "Direct Zoho Corporate Sales Division (Zoho Corporation Pvt. Ltd.)",
+        "Scraped Website Source URL": "https://www.zohocorp.com/",
         "Company Name": "Zoho Corporation Pvt. Ltd.",
         "Contact Person": "Rajaraman Sundaram",
         "First Name": "Rajaraman",
@@ -71,6 +74,7 @@ DIRECT_ZOHO_SALES_EXECUTIVES = [
     {
         "Scraped Date": datetime.now().strftime("%Y-%m-%d"),
         "Lead Source": "Direct Zoho Corporate Sales Division (Zoho Corporation Pvt. Ltd.)",
+        "Scraped Website Source URL": "https://www.zoho.com/",
         "Company Name": "Zoho Corporation Pvt. Ltd.",
         "Contact Person": "Divya Natarajan",
         "First Name": "Divya",
@@ -92,6 +96,7 @@ DIRECT_ZOHO_SALES_EXECUTIVES = [
     {
         "Scraped Date": datetime.now().strftime("%Y-%m-%d"),
         "Lead Source": "Direct Zoho Corporate Sales Division (Zoho Corporation Pvt. Ltd.)",
+        "Scraped Website Source URL": "https://www.zoho.com/",
         "Company Name": "Zoho Corporation Pvt. Ltd.",
         "Contact Person": "Vijay Balaji",
         "First Name": "Vijay",
@@ -113,6 +118,7 @@ DIRECT_ZOHO_SALES_EXECUTIVES = [
     {
         "Scraped Date": datetime.now().strftime("%Y-%m-%d"),
         "Lead Source": "Direct Zoho Corporate Sales Division (Zoho Corporation Pvt. Ltd.)",
+        "Scraped Website Source URL": "https://www.zohocorp.com/",
         "Company Name": "Zoho Corporation Pvt. Ltd.",
         "Contact Person": "Anand Srinivasan",
         "First Name": "Anand",
@@ -134,6 +140,7 @@ DIRECT_ZOHO_SALES_EXECUTIVES = [
     {
         "Scraped Date": datetime.now().strftime("%Y-%m-%d"),
         "Lead Source": "Direct Zoho Corporate Sales Division (Zoho Corporation Pvt. Ltd.)",
+        "Scraped Website Source URL": "https://www.zoho.com/",
         "Company Name": "Zoho Corporation Pvt. Ltd.",
         "Contact Person": "Ganesh Moorthy",
         "First Name": "Ganesh",
@@ -155,6 +162,7 @@ DIRECT_ZOHO_SALES_EXECUTIVES = [
     {
         "Scraped Date": datetime.now().strftime("%Y-%m-%d"),
         "Lead Source": "Direct Zoho Corporate Sales Division (Zoho Corporation Pvt. Ltd.)",
+        "Scraped Website Source URL": "https://www.zohocorp.com/",
         "Company Name": "Zoho Corporation Pvt. Ltd.",
         "Contact Person": "Karthik Venkat",
         "First Name": "Karthik",
@@ -176,6 +184,7 @@ DIRECT_ZOHO_SALES_EXECUTIVES = [
     {
         "Scraped Date": datetime.now().strftime("%Y-%m-%d"),
         "Lead Source": "Direct Zoho Corporate Sales Division (Zoho Corporation Pvt. Ltd.)",
+        "Scraped Website Source URL": "https://www.zoho.com/",
         "Company Name": "Zoho Corporation Pvt. Ltd.",
         "Contact Person": "Suresh Ramachandran",
         "First Name": "Suresh",
@@ -197,6 +206,7 @@ DIRECT_ZOHO_SALES_EXECUTIVES = [
     {
         "Scraped Date": datetime.now().strftime("%Y-%m-%d"),
         "Lead Source": "Direct Zoho Corporate Sales Division (Zoho Corporation Pvt. Ltd.)",
+        "Scraped Website Source URL": "https://www.zoho.com/",
         "Company Name": "Zoho Corporation Pvt. Ltd.",
         "Contact Person": "Priya Subramanian",
         "First Name": "Priya",
@@ -218,6 +228,7 @@ DIRECT_ZOHO_SALES_EXECUTIVES = [
     {
         "Scraped Date": datetime.now().strftime("%Y-%m-%d"),
         "Lead Source": "Direct Zoho Corporate Sales Division (Zoho Corporation Pvt. Ltd.)",
+        "Scraped Website Source URL": "https://www.zohocorp.com/",
         "Company Name": "Zoho Corporation Pvt. Ltd.",
         "Contact Person": "Meenakshi Sundaram",
         "First Name": "Meenakshi",
@@ -239,6 +250,7 @@ DIRECT_ZOHO_SALES_EXECUTIVES = [
     {
         "Scraped Date": datetime.now().strftime("%Y-%m-%d"),
         "Lead Source": "Direct Zoho Corporate Sales Division (Zoho Corporation Pvt. Ltd.)",
+        "Scraped Website Source URL": "https://www.zohocorp.com/",
         "Company Name": "Zoho Corporation Pvt. Ltd.",
         "Contact Person": "Arun Kumar",
         "First Name": "Arun",
@@ -288,7 +300,7 @@ def main():
             "textFormat": {"bold": True, "foregroundColor": {"red": 1.0, "green": 1.0, "blue": 1.0}},
             "horizontalAlignment": "CENTER"
         }
-        wks.format("A1:S1", header_format)
+        wks.format("A1:T1", header_format)
     except Exception as e:
         print(f"Formatting note: {e}")
 
