@@ -1,17 +1,15 @@
-name: Hourly Automated Odoo Sales Executive Scraper (CRM Ready)
+name: Hourly Odoo & Zoho Sales Executive Lead Generator
 
 on:
   schedule:
-    # Runs automatically EVERY 1 HOUR at minute 0
-    - cron: '0 * * * *'
+    - cron: '0 * * * *' # Runs every 1 hour
   workflow_dispatch:
 
 jobs:
-  scrape-and-sync:
+  run-lead-generator:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
+      - name: Checkout Code Repository
         uses: actions/checkout@v3
 
       - name: Set up Python 3.10
@@ -24,16 +22,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4 gspread google-auth
 
-      - name: Run Live Odoo Sales Executive Scraper & Google Sheet Sync
+      - name: Authenticate GCP Service Account
         run: |
-          python live_odoo_partner_tn_india_scraper.py
-        env:
-          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+          echo "${{ secrets.GCP_SA_KEY }}" > sheet-sync-504707-85df40232946.json
 
-      - name: Commit & Push Updated Documentation
+      - name: Execute Odoo & Zoho Lead Generators
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action Bot"
-          git add -A
-          git diff-index --quiet HEAD || git commit -m "auto: hourly scraper sync completed"
-          git push
+          python run_all_lead_generators.py
+
+      - name: Clean Credentials
+        if: always()
+        run: |
+          rm -f sheet-sync-504707-85df40232946.json
