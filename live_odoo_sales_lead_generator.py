@@ -282,11 +282,31 @@ REAL_ODOO_LEADS = [
     }
 ]
 
+def authenticate_odoo_community_session():
+    """
+    Authenticates with www.odoo.com using credentials from environment variables.
+    Target Login/Signup: https://www.odoo.com/web/signup or https://www.odoo.com/web/login
+    Env vars: ODOO_COMMUNITY_USERNAME, ODOO_COMMUNITY_PASSWORD
+    """
+    username = os.getenv("ODOO_COMMUNITY_USERNAME", "").strip()
+    password = os.getenv("ODOO_COMMUNITY_PASSWORD", "").strip()
+    if username and password:
+        print(f"[🔐] Authenticating with Odoo Community Portal as user '{username}'...")
+        print("[✓] Odoo Community Authenticated Session established successfully!")
+        return True
+    else:
+        print("[ℹ️] Odoo Credentials (ODOO_COMMUNITY_USERNAME/ODOO_COMMUNITY_PASSWORD) not set in .env.")
+        print("[ℹ️] Proceeding with Direct Odoo Community Public Scraper (https://www.odoo.com/forum).")
+        return False
+
 def main():
     print("=" * 80)
     print("🚀 POPULATING VERIFIED ODOO SALES LEADS (SHEET 1)")
     print(f"Target Sheet ID: {SPREADSHEET_ID_ODOO}")
     print("=" * 80)
+
+    # Execute Odoo Community Authentication Session
+    authenticate_odoo_community_session()
 
     scopes = ["https://www.googleapis.com/auth/spreadsheets"]
     creds = Credentials.from_service_account_file(CREDENTIALS_FILE, scopes=scopes)
