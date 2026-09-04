@@ -1,0 +1,86 @@
+================================================================================
+🚀 MASTER SCRAPING KEYWORDS & DIRECT GOOGLE SHEET MAPPINGS MANUAL
+================================================================================
+
+1. DEDICATED GOOGLE SPREADSHEETS:
+--------------------------------------------------------------------------------
+• ODOO SALES EXECUTIVE LEADS (SHEET 1):
+  URL: https://docs.google.com/spreadsheets/d/1X_8LbsHisyvoCfjSuTX5yRVsRgXPDEmu3W5RWXuAC1o/edit?usp=sharing
+  Spreadsheet ID: 1X_8LbsHisyvoCfjSuTX5yRVsRgXPDEmu3W5RWXuAC1o
+  Target Entity: Odoo India Pvt. Ltd. (Direct Corporate Sales Executives)
+  GitHub Repo: https://github.com/mdyasar49/odoo-lead-generator.git
+
+• ZOHO SALES EXECUTIVE LEADS (SHEET 2):
+  URL: https://docs.google.com/spreadsheets/d/18oHqPuo6BhAgI5e_GLSSps5fSc_DpzYEYofgPKxBv9o/edit?usp=sharing
+  Spreadsheet ID: 18oHqPuo6BhAgI5e_GLSSps5fSc_DpzYEYofgPKxBv9o
+  Target Entity: Zoho Corporation Pvt. Ltd. (Direct Corporate Sales Executives)
+  GitHub Repo: https://github.com/mdyasar49/zoho-lead-generator.git
+
+================================================================================
+2. SCRAPING KEYWORDS & DORKS (ODOO DIRECT SALES EXECUTIVES):
+================================================================================
+Primary Target: Odoo India Pvt. Ltd. (Direct Corporate Office & Regional Sales Execs)
+Official Portal: https://www.odoo.com/contactus
+Directory URL  : https://www.odoo.com/partners/country/india-101
+
+Search Dorks & Keywords:
+- "Odoo India" "Sales Executive" "Tamil Nadu" OR "Chennai" OR "Coimbatore"
+- "Odoo India" "Business Development Executive" phone email
+- "Odoo India" "Territory Sales Manager" "South India"
+- "Odoo India" "Account Executive" "Gandhinagar" OR "Mumbai"
+- site:odoo.com "Sales" OR "Business Development" "India"
+
+Location Filter Rules:
+- Primary: Tamil Nadu (Chennai, Coimbatore, Madurai, Trichy)
+- Secondary: India Headquarters (Gandhinagar / Gujarat, Mumbai)
+
+================================================================================
+3. SCRAPING KEYWORDS & DORKS (ZOHO DIRECT SALES EXECUTIVES):
+================================================================================
+Primary Target: Zoho Corporation Pvt. Ltd. (Direct Headquarters & Regional Sales Execs)
+Official Portal: https://www.zohocorp.com/ & https://www.zoho.com
+Headquarters   : Estancia IT Park, Chengalpattu / Chennai & Tenkasi, Tamil Nadu
+
+Search Dorks & Keywords:
+- "Zoho Corporation" "Sales Executive" "Chennai" OR "Tenkasi" OR "Coimbatore"
+- "Zoho Corporation" "Business Development Manager" "Tamil Nadu"
+- "Zoho Corporation" "Territory Sales Manager" "Tamil Nadu"
+- "Zoho Corporation" "Senior Account Executive" phone email
+- site:zoho.com OR site:zohocorp.com "Sales" OR "Business Development"
+
+Location Filter Rules:
+- Primary: Tamil Nadu (Chennai, Coimbatore, Madurai, Tenkasi Campus)
+- Secondary: Rest of India
+
+================================================================================
+4. 19-COLUMN CRM IMPORT SCHEMA (COLUMNS A1 TO S1):
+================================================================================
+A: Scraped Date
+B: Lead Source
+C: Company Name
+D: Contact Person
+E: First Name
+F: Last Name
+G: Job Title
+H: Work Email (RFC Validated - @odoo.com / @zohocorp.com)
+I: Phone Number (Direct Mobile or Desk Line)
+J: Company Website URL (Unique Product / Departmental URL)
+K: City
+L: State
+M: Country
+N: Industry / Module Focus
+O: Partner Grade (Direct Parent Company (HQ))
+P: Lead Status (New / Active Lead)
+Q: Call Status (New / Pending Call)
+R: Follow Up Notes
+S: Description
+
+================================================================================
+5. AUTOMATION TIMING & CRON SCHEDULE:
+================================================================================
+Cron Expression: 0 * * * * (Runs at minute 0 of every hour)
+Execution Frequency: Every 1 Hour automatically via GitHub Actions
+Remote Repositories:
+- https://github.com/mdyasar49/odoo-lead-generator.git
+- https://github.com/mdyasar49/zoho-lead-generator.git
+================================================================================
