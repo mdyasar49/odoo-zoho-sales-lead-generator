@@ -51,7 +51,7 @@ ZOHO_COMMUNITY_PASSWORD = os.getenv("ZOHO_COMMUNITY_PASSWORD", "")
 ZOHO_LOGIN_URL = "https://accounts.zoho.com/signin"
 ZOHO_COMMUNITY_URL = "https://help.zoho.com/portal/en/community"
 
-# CRM Standard Schema Columns (21 Columns)
+# CRM Standard Schema Columns (22 Columns with Both Direct Profile & Search Query)
 HEADERS = [
     "Scraped Date",
     "Lead Source",
@@ -64,7 +64,8 @@ HEADERS = [
     "Work Email",
     "Phone Number",
     "Company Website URL",
-    "LinkedIn / Social Profile URL",
+    "LinkedIn Profile URL",
+    "LinkedIn Search Query URL",
     "City",
     "State",
     "Country",
@@ -75,3 +76,4 @@ HEADERS = [
     "Follow Up Notes",
     "Description"
 ]
+
