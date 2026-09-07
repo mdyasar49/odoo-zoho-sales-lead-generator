@@ -6,7 +6,7 @@ Ensures every scraper produces identical, CRM-ready standardized lead dictionari
 from datetime import datetime
 from typing import Dict, Any, Optional
 
-# Standard 22 CRM Headers
+# Standard 21 CRM Headers
 STANDARD_HEADERS = [
     "Scraped Date",
     "Lead Source",
@@ -19,8 +19,7 @@ STANDARD_HEADERS = [
     "Work Email",
     "Phone Number",
     "Company Website URL",
-    "LinkedIn Profile URL",
-    "LinkedIn Search Query URL",
+    "LinkedIn / Social Profile URL",
     "City",
     "State",
     "Country",
@@ -31,7 +30,6 @@ STANDARD_HEADERS = [
     "Follow Up Notes",
     "Description"
 ]
-
 
 # Extended 31 Enterprise Zoho CRM Headers
 ZOHO_CRM_HEADERS = [
