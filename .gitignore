@@ -11,3 +11,8 @@ __pycache__/
 .venv
 env/
 venv/
+.env
+*.log
+logs/
+*.pyc
+credentials.json
