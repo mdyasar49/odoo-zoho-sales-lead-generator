@@ -338,7 +338,7 @@ def scrape_live_odoo_sales_leads():
     json_path = OUTPUT_DIR / "odoo_sales_executive_leads_tn.json"
     
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=HEADERS)
+        writer = csv.DictWriter(f, fieldnames=HEADERS, extrasaction="ignore")
         writer.writeheader()
         writer.writerows(scraped_leads)
         
